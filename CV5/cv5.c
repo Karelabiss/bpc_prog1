@@ -20,13 +20,13 @@ double velikost(double a[3]){
 }
 
 double skalarniSoucin(double a[3], double b[3]){
-    return (a[0]*b[0] + a[1]*b[1]);
+    return (a[0]*b[0] + a[1]*b[1] + a[2]*b[2]);
 }
 
 void VectorovySoucin(double a[3], double b[3], double c[3]){
-    c[0] = a[1] * b[2] - a[2] * b[1];
-    c[1] = a[2] * b[0] - a[0] * b[2];
-    c[2] = a[0] * b[1] - a[1] * b[0];
+    c[0] = (a[1] * b[2]) - (a[2] * b[1]);
+    c[1] = (a[2] * b[0]) - (a[0] * b[2]);
+    c[2] = (a[0] * b[1]) - (a[1] * b[0]);
 }
 
 int main(){
@@ -45,5 +45,5 @@ int main(){
     printf("Velkost Vectoru B je: %lf \n", velikost(vector.a));
 
     printf("Skalarni soucin vectorov A a B je: %lf\n", skalarniSoucin(vector.a, vector.b));
-    printf("Skalarni soucin vectorov A a B je: %lf\n", skalarniSoucin(vector.a, vector.b));
+    printf("Skalarni soucin vectorov A a B je: [%lf, %lf, %lf]\n", vector.c[0], vector.c[1], vector.c[2]);
 }
