@@ -26,3 +26,17 @@ double prumernaVzdalenost(int velikost, int (*poleBodu)[2], int referencniX, int
     }
     return soucetVzdalenosti / velikost;
 }
+
+int indexNejdelsiBod(int velikost, int (*poleBodu)[2], int referencniX, int referencniY) {
+    int indexNejdelsiho = -1;
+    double nejvetsiVzdalenost = -1.0;
+    
+    for(int i = 0; i < velikost; i++) {
+        double vzdalenost = vzdalenostBodu(referencniX, referencniY, poleBodu[i][0], poleBodu[i][1]);
+        if(vzdalenost > nejvetsiVzdalenost) {
+            nejvetsiVzdalenost = vzdalenost;
+            indexNejdelsiho = i;
+        }
+    }
+    return indexNejdelsiho;
+}

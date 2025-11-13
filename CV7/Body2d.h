@@ -9,3 +9,5 @@ int indexNejblizsiBod(int velikost, int (*poleBodu)[2], int referencniX, int ref
 
 // Calculate average distance from reference point to all points
 double prumernaVzdalenost(int velikost, int (*poleBodu)[2], int referencniX, int referencniY);
+
+int indexNejdelsiBod(int velikost, int (*poleBodu)[2], int referencniX, int referencniY);
